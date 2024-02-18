@@ -6,10 +6,13 @@
 <p>Click link to preview of our web application</p>
 https://drive.google.com/drive/folders/1GS1Z-xS2JP9tCN7Cpw60xrs8e-RuJOSS?usp=sharing
 <h2>How to run this project</h2>
+<h4>First split your terminal into two terminals</h4>
 <p>cd backend</p>
 <p>npm init -y</p>
 <p>npm i mongoose express ejs body-parser cors</p>
+<p>nodemon server.js</p>
 <hr>
 <p>cd frontend</p>
 <p>npm init -y</p>
 <p>npm i mongoose express ejs multer body-parser</p>
+<p>nodemon app.js</p>
