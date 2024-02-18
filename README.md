@@ -8,4 +8,9 @@ https://drive.google.com/drive/folders/1GS1Z-xS2JP9tCN7Cpw60xrs8e-RuJOSS?usp=sha
 <h2>How to run this project</h2>
 <p>cd backend</p>
 <p>npm init -y</p>
-<p>npm i mongoose express ejs cors</p>
+<p>npm i mongoose express ejs body-parser cors</p>
+<hr>
+<hr>
+<p>cd frontend</p>
+<p>npm init -y</p>
+<p>npm i mongoose express ejs multer body-parser</p>
