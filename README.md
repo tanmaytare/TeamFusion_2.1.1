@@ -5,7 +5,7 @@
 <p>Team Fusion 2.1.1 UpSert</p>
 <p>Click link to preview of our web application</p>
 https://drive.google.com/drive/folders/1GS1Z-xS2JP9tCN7Cpw60xrs8e-RuJOSS?usp=sharing
-<h3>How to run this project</h3>
+<h2>How to run this project</h2>
 <p>cd backend</p>
 <p>npm init -y</p>
 <p>npm i mongoose express ejs cors</p>
