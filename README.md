@@ -16,3 +16,7 @@ https://drive.google.com/drive/folders/1GS1Z-xS2JP9tCN7Cpw60xrs8e-RuJOSS?usp=sha
 <p>npm init -y</p>
 <p>npm i mongoose express ejs multer body-parser</p>
 <p>nodemon app.js</p>
+<hr>
+<h3>Server & Client</h3>
+<h6>your server is live on 5000 port</h6>
+<h6>your Client is live on 3000 port</h6>
