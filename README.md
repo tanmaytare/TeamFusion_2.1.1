@@ -18,5 +18,7 @@ https://drive.google.com/drive/folders/1GS1Z-xS2JP9tCN7Cpw60xrs8e-RuJOSS?usp=sha
 <p>nodemon app.js</p>
 <hr>
 <h3>Server & Client</h3>
-<h6>your server is live on 5000 port</h6>
-<h6>your Client is live on 3000 port</h6>
+<h5>your server is live on 5000 port</h5>
+<h5>your Client is live on 3000 port</h5>
+<h4>Server : http://localhost:5000/</h4>
+<h4>Client : http://localhost:3000/</h4>
