@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const userdata = require('./models/userdata');
 const startupdata = require('./models/startupdata');
 const mentorprograms = require('./models/mentorprograms')
-const Postcol = require('./models/post');
+const comments = require('./models/comments');
 const multer = require('multer');
 
 
@@ -118,6 +118,21 @@ app.post('/registerprogram',async(req,res)=>{
     let result = await program.save();
     console.log(result);
     res.send({data:result,status:"ok"});
+});
+
+app.post('/comments/:id',async(req,res)=>{
+    const responses = await comments.find({pid:req.params.id});
+    console.log("array : "+responses);
+    res.send({data:responses});
+});
+
+app.post('/postcomments/:id',async(req,res)=>{
+    const text = req.body.comment;
+    let comment = new comments();
+    comment.text = text;
+    comment.pid = req.params.id;
+    let response = await comment.save();
+    res.send(response);
 });
 
 app.listen(port,(req,res)=>{
