@@ -38,9 +38,9 @@
         <div id="posts-container" class="postContainer">
             <% posts.forEach(post => { %>
                 <div class="post">
-                    <p><%= post.text %></p>
+                    <p class="posttext"><%= post.text %></p>
                     <% if (post.image !== null) { %>
-                        <img src="/images/<%= post._id %>" alt="">
+                        <img  src="/images/<%= post._id %>" alt="">
                         <% } else { %>
                         <% } %>
                     <div class="postStatistics">

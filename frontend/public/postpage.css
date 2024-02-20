@@ -94,16 +94,22 @@ button:hover {
 }
 
 .post {
+    width:100%;
     margin-bottom: 20px;
     padding: 10px;
     background-color:aliceblue;
     border-bottom: 1px solid #ccc;
     margin-bottom:2rem;
-}
+    width:max-content;
 
+}
+.posttext{
+    width:90vh;
+    text-align: justify;
+}
 .post img {
-    max-width: 100%;
-    height: auto;
+    width:90vh;
+    height:20rem;
     border-radius:5px;
 }
 
