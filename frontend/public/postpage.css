@@ -106,3 +106,40 @@ button:hover {
     height: auto;
     border-radius:5px;
 }
+
+.postStatistics{
+    width:100%;
+    height:5vh;
+    display: flex;
+    background-color: rgb(200, 227, 250);
+}
+.likepost{
+    width:15%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.likepost a{
+    font-size:18px;
+    text-decoration: none;
+    color:black;
+}
+.postlikeno{
+    font-size:18px;
+    font-family:sans-serif;
+    font-weight:600;
+    padding:0px;
+    margin:0px;
+}
+.comments{
+    width:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments a{
+    font-size:18px;
+    text-decoration: none;
+    color:black;
+}

@@ -15,6 +15,10 @@ mongoose.connect('mongodb://localhost:27017/newtest', { useNewUrlParser: true, u
             data: Buffer,
             contentType: String,
         },
+        like:{
+          type:Number,
+          default:0
+        }
     });
 
 
@@ -38,6 +42,7 @@ app.get('/postpage',async(req,res)=>{
   console.log(response);
   res.render("postpage",{posts:response});
 });
+
 
 app.post('/search',async(req,res)=>{
   let startupname = req.body.searchele;
@@ -288,6 +293,55 @@ app.post('/addmentorprogram',async(req,res)=>{
   }) 
   .then(()=>{
     res.redirect('/mentorship');
+});
+});
+
+
+app.get('/likepost/:id',async(req,res)=>{
+  try{
+  let post = await Post.findById(req.params.id);
+  post.like = post.like + 1;
+  let response = await post.save();
+  console.log(response);
+  res.redirect('/postpage');
+  }
+  catch(err){
+    console.log(err);
+    res.redirect('/postpage');
+  }
+});
+
+
+app.get('/comments/:id',async(req,res)=>{
+  const result = await fetch(`http://localhost:5000/comments/${req.params.id}`, {
+    method: "post",
+    body: JSON.stringify(),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data.data);
+    res.render("comments",{comments:data.data,pid:req.params.id});
+  })
+  .catch((error) => {
+    console.error('Error submitting form:', error);
+    res.redirect('/postpage');
+  });
+});
+
+app.post('/postcomments/:id',async(req,res)=>{
+  const comment = req.body.comment;
+  let result = await fetch(`http://localhost:5000/postcomments/${req.params.id}`,{
+    method: "post",
+    body: JSON.stringify({comment}),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }) 
+  .then((response)=>{
+    res.redirect(`/comments/${req.params.id}`);
 });
 });
 
